@@ -1,5 +1,9 @@
 <template>
-  <button>这个是一个xxss按钮</button>
+  <button>
+    <span v-if="$slots.default">
+      <slot></slot>
+    </span>
+  </button>
 </template>
 
 <script>
